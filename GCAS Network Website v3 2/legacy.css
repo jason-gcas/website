@@ -1,0 +1,433 @@
+/* ═══════════════════════════════════════════════════════════════
+   LEGACY PAGE SHIM
+   Re-styles body content from specialties/contract-vehicles/
+   consulting/mentorship into the new Apple-clean theme.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Layout ─── */
+.content-wrap {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--s-6);
+}
+
+.page-section {
+  padding: var(--s-10) 0;
+}
+.page-section.alt {
+  background: var(--off-white);
+}
+
+/* ─── Page hero (legacy) — matches new .page-hero look ─── */
+main > .page-hero,
+section.page-hero {
+  padding-top: calc(var(--nav-h) + var(--s-9)) !important;
+  padding-bottom: var(--s-9) !important;
+  text-align: center;
+  position: relative;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(10, 37, 64, 0.05), transparent 70%);
+  pointer-events: none;
+}
+.page-hero-inner {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 var(--s-6);
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(48px, 8vw, 112px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin: 0 0 var(--s-5);
+  color: var(--near-black);
+}
+.page-hero-accent {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--navy);
+}
+.page-hero-sub,
+.page-hero .lede {
+  font-size: clamp(19px, 1.8vw, 24px);
+  line-height: 1.4;
+  color: var(--dark-gray);
+  max-width: 680px;
+  margin: 0 auto var(--s-7);
+}
+.page-hero .hero-actions {
+  display: flex;
+  gap: var(--s-3);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* ─── Section header (legacy) ─── */
+.page-section .section-header {
+  max-width: 820px;
+  margin: 0 auto var(--s-9);
+  text-align: center;
+}
+.page-section .section-header h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  margin: 0 0 var(--s-4);
+  color: var(--near-black);
+}
+.page-section .section-header h2 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--navy);
+}
+.page-section .section-header .lede {
+  font-size: clamp(19px, 1.8vw, 22px);
+  line-height: 1.45;
+  color: var(--dark-gray);
+  margin: var(--s-3) auto 0;
+  max-width: 720px;
+}
+.eyebrow.light { color: rgba(255,255,255,0.85); }
+
+/* ─── Pillar grid (used widely) ─── */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-5);
+}
+.pillar-card {
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+  padding: var(--s-7);
+  transition: transform var(--t-med), box-shadow var(--t-med), border-color var(--t-med);
+}
+.pillar-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -16px rgba(10, 37, 64, 0.14);
+  border-color: rgba(10, 37, 64, 0.2);
+}
+.pillar-num {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+  margin-bottom: var(--s-4);
+  display: block;
+}
+.pillar-card h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 var(--s-3);
+  color: var(--near-black);
+}
+.pillar-card p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+/* ─── Specialty grid (specialties.html) ─── */
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-5);
+}
+.specialty-card {
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+  padding: var(--s-7);
+  transition: transform var(--t-med), box-shadow var(--t-med), border-color var(--t-med);
+}
+.specialty-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -16px rgba(10, 37, 64, 0.14);
+  border-color: var(--navy);
+}
+.specialty-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--r-md);
+  background: var(--navy-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--s-5);
+}
+.specialty-icon svg { width: 28px; height: 28px; color: var(--navy); }
+.specialty-card h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 var(--s-2);
+  color: var(--near-black);
+}
+.specialty-naics {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--navy-tint);
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  display: inline-block;
+  margin-bottom: var(--s-4);
+}
+.specialty-card p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+/* ─── Journey (contract-vehicles, consulting, mentorship) ─── */
+.journey {
+  display: grid;
+  gap: var(--s-7);
+  max-width: 880px;
+  margin: 0 auto;
+}
+.journey-step {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-3);
+  padding: var(--s-7);
+  background: var(--white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+}
+.journey-step h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--near-black);
+}
+.journey-step h3::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: var(--navy);
+  margin-right: var(--s-3);
+  vertical-align: middle;
+  position: relative;
+  top: -4px;
+}
+.journey-step p,
+.journey-step ul,
+.journey-step li {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--dark-gray);
+}
+.journey-step p { margin: 0 0 var(--s-3); }
+.journey-step ul { padding-left: 0; margin: var(--s-3) 0 0; display: grid; gap: var(--s-2); }
+.journey-step li {
+  list-style: none;
+  padding-left: 24px;
+  position: relative;
+}
+.journey-step li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--navy);
+  font-weight: 700;
+}
+.journey-step strong { color: var(--near-black); font-weight: 600; }
+
+/* ─── Callout band (CTA strip) ─── */
+.callout-band {
+  background: var(--navy);
+  color: var(--white);
+  padding: var(--s-9) var(--s-7);
+  border-radius: var(--r-xl);
+  text-align: center;
+  margin: var(--s-9) 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.callout-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(255,255,255,0.08), transparent 60%);
+  pointer-events: none;
+}
+.callout-band h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(32px, 4.5vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin: 0 0 var(--s-4);
+  color: var(--white);
+  position: relative;
+}
+.callout-band h2 em {
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255,255,255,0.72);
+}
+.callout-band p {
+  font-size: 19px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.8);
+  margin: 0 0 var(--s-7);
+  position: relative;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.callout-band .hero-actions {
+  display: flex;
+  gap: var(--s-3);
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.callout-band .btn-primary,
+.callout-band .btn-light {
+  background: var(--white);
+  color: var(--navy);
+}
+.callout-band .btn-primary:hover,
+.callout-band .btn-light:hover {
+  background: var(--soft-gray);
+  transform: translateY(-1px);
+}
+.callout-band .btn-ghost {
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+}
+.callout-band .btn-ghost:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--white);
+}
+
+/* ─── FAQ ─── */
+.faq {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.faq details {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--s-5) 0;
+}
+.faq summary {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  cursor: pointer;
+  color: var(--near-black);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--s-4);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: '+';
+  color: var(--navy);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  transition: transform var(--t-fast);
+}
+.faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq-body {
+  margin-top: var(--s-4);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+}
+.faq-body p { margin: 0 0 var(--s-3); }
+.faq-body p:last-child { margin: 0; }
+
+/* ─── Mentorship price ─── */
+.price {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin: var(--s-3) 0;
+}
+
+/* ─── Lede paragraph ─── */
+.lede {
+  font-size: clamp(19px, 1.8vw, 22px);
+  line-height: 1.5;
+  color: var(--dark-gray);
+}
+
+/* ─── Footer override (legacy class names) ─── */
+.footer-inner.content-wrap {
+  display: grid !important;
+  grid-template-columns: 1.2fr 2fr;
+  gap: var(--s-8);
+  align-items: start;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-5);
+}
+.footer-links a {
+  font-size: 14px;
+  color: var(--dark-gray);
+  transition: color var(--t-fast);
+}
+.footer-links a:hover { color: var(--navy); }
+.footer-copy {
+  margin-top: var(--s-7);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--color-border);
+  font-size: 12px;
+  color: var(--mid-gray);
+  text-align: center;
+}
+
+/* ─── Responsive overrides for legacy ─── */
+@media (max-width: 1024px) {
+  .pillar-grid,
+  .specialty-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner.content-wrap { grid-template-columns: 1fr; gap: var(--s-7); }
+}
+
+@media (max-width: 640px) {
+  .pillar-grid,
+  .specialty-grid { grid-template-columns: 1fr; }
+  .callout-band { padding: var(--s-8) var(--s-5); border-radius: var(--r-lg); }
+  .journey-step { padding: var(--s-5); }
+  .journey-step h3::before { display: none; }
+}

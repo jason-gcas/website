@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check If I Qualify — GCAS Network</title>
+  <meta name="description" content="Tell us about your business. A senior GCAS advisor will personally review your information and respond within one business day. Performance-based fees, zero out-of-pocket." />
+  <meta property="og:title" content="Check If I Qualify — GCAS Network" />
+  <meta property="og:description" content="Tell us about your business. A senior GCAS advisor will personally review your information and respond within one business day. Performance-based fees, zero out-of-pocket." />
+  <meta property="og:image" content="gcas_hero.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="GCAS Network Home">
+        <svg width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="4" stroke="#0A2540" stroke-width="2"/>
+          <path d="M8 20 C8 13.4 13.4 8 20 8 C24.2 8 27.9 10.1 30 13.3" stroke="#0A2540" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M12 20 C12 15.6 15.6 12 20 12 C22.3 12 24.4 13 25.8 14.6" stroke="#0A2540" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <circle cx="20" cy="20" r="3" fill="#0A2540"/>
+          <path d="M20 20 L30 30" stroke="#0A2540" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-primary">GCAS NETWORK</span>
+          <span class="logo-sub">Government Contract Advisory</span>
+        </div>
+      </a>
+      <nav class="nav-links" role="navigation">
+        <a href="method.html">Method</a>
+        <a href="network.html">Network</a>
+        <a href="compliance.html">Compliance</a>
+        <a href="sba.html">SBA</a>
+        <a href="consultants.html">Consultants</a>
+        <a href="stories.html">Stories</a>
+        <a href="qualify.html" class="nav-cta">Check If I Qualify →</a>
+      </nav>
+      <button class="nav-hamburger" aria-label="Open menu" id="hamburger" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="method.html">Our Method</a>
+    <a href="network.html">The Network</a>
+    <a href="compliance.html">Compliance</a>
+    <a href="sba.html">SBA Designations</a>
+    <a href="consultants.html">Become a Consultant</a>
+    <a href="specialties.html">Specialties</a>
+    <a href="contract-vehicles.html">Contract Vehicles</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="mentorship.html">Mentorship</a>
+    <a href="stories.html">Client Stories</a>
+    <a href="qualify.html" class="mobile-cta">Check If I Qualify →</a>
+  </div>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <p class="eyebrow reveal">Get Started</p>
+        <h1 class="display-xl reveal">Check if your<br/>business <em>qualifies.</em></h1>
+        <p class="lead reveal">GCAS works with a curated portfolio of small businesses. Tell us about your operation and a senior advisor will personally review your information and respond within one business day.</p>
+        <div style="margin-top: 32px; display: inline-flex; gap: 24px; flex-wrap: wrap; justify-content: center; font-size: 14px; color: var(--mid-gray); letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600;" class="reveal">
+          <span>Performance-Based Fees</span>
+          <span style="color: var(--light-gray);">·</span>
+          <span>Zero Out-of-Pocket</span>
+          <span style="color: var(--light-gray);">·</span>
+          <span>$2B+ Awarded for Clients</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-bg-soft">
+      <div class="wrap-narrow">
+
+        <!-- Tabs -->
+        <div class="form-tabs reveal" role="tablist">
+          <button class="form-tab active" data-panel="qualify-panel" role="tab" aria-selected="true">Qualification Intake</button>
+          <button class="form-tab" data-panel="schedule-panel" role="tab" aria-selected="false" id="schedule">Schedule Discovery Call</button>
+        </div>
+
+        <!-- ─── QUALIFICATION INTAKE PANEL ─── -->
+        <div class="form-panel active" id="qualify-panel">
+          <div class="form-card reveal">
+            <p class="form-intro">Tell us about your business. A GCAS advisor will personally review your application and respond within one business day.</p>
+
+            <form id="qualifyForm" novalidate>
+              <div class="form-grid">
+
+                <div class="form-field">
+                  <label for="q_first">First Name <span class="required">*</span></label>
+                  <input type="text" id="q_first" name="firstName" required autocomplete="given-name" />
+                </div>
+
+                <div class="form-field">
+                  <label for="q_last">Last Name <span class="required">*</span></label>
+                  <input type="text" id="q_last" name="lastName" required autocomplete="family-name" />
+                </div>
+
+                <div class="form-field">
+                  <label for="q_email">Email <span class="required">*</span></label>
+                  <input type="email" id="q_email" name="email" required autocomplete="email" placeholder="name@company.com" />
+                </div>
+
+                <div class="form-field">
+                  <label for="q_phone">Phone <span class="required">*</span></label>
+                  <input type="tel" id="q_phone" name="phone" required autocomplete="tel" placeholder="(555) 123-4567" />
+                </div>
+
+                <div class="form-field full">
+                  <label for="q_company">Company Name <span class="required">*</span></label>
+                  <input type="text" id="q_company" name="company" required autocomplete="organization" />
+                </div>
+
+                <div class="form-field">
+                  <label for="q_state">State <span class="required">*</span></label>
+                  <input type="text" id="q_state" name="state" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="q_years">Years in Business</label>
+                  <select id="q_years" name="yearsInBusiness">
+                    <option value="">Select…</option>
+                    <option>Under 2 years</option>
+                    <option>2–5 years</option>
+                    <option>5–10 years</option>
+                    <option>10+ years</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="q_revenue">Annual Revenue</label>
+                  <select id="q_revenue" name="annualRevenue">
+                    <option value="">Select…</option>
+                    <option>Under $250K</option>
+                    <option>$250K – $1M</option>
+                    <option>$1M – $5M</option>
+                    <option>$5M – $20M</option>
+                    <option>Over $20M</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="q_specialty">Primary Specialty</label>
+                  <select id="q_specialty" name="primarySpecialty">
+                    <option value="">Select…</option>
+                    <option>Roofing</option>
+                    <option>HVAC</option>
+                    <option>Pest Control</option>
+                    <option>Grounds Maintenance</option>
+                    <option>Tree Trimming</option>
+                    <option>Construction</option>
+                    <option>Painting</option>
+                    <option>Pressure Washing</option>
+                    <option>Security Guard Services</option>
+                    <option>Accounting / Professional Services</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div class="form-field full">
+                  <label>Existing Set-Aside Designations (check all that apply)</label>
+                  <div class="checkbox-grid">
+                    <label><input type="checkbox" name="setAside" value="8(a)" /> 8(a)</label>
+                    <label><input type="checkbox" name="setAside" value="HUBZone" /> HUBZone</label>
+                    <label><input type="checkbox" name="setAside" value="WOSB" /> WOSB</label>
+                    <label><input type="checkbox" name="setAside" value="EDWOSB" /> EDWOSB</label>
+                    <label><input type="checkbox" name="setAside" value="SDVOSB" /> SDVOSB</label>
+                    <label><input type="checkbox" name="setAside" value="VOSB" /> VOSB</label>
+                    <label><input type="checkbox" name="setAside" value="SDB" /> SDB</label>
+                    <label><input type="checkbox" name="setAside" value="None yet" /> None yet</label>
+                  </div>
+                </div>
+
+                <div class="form-field full">
+                  <label for="q_goal">What do you want to accomplish in the next 12 months?</label>
+                  <textarea id="q_goal" name="goal" placeholder="Tell us a bit about your business goals, current obstacles, and what success looks like for you."></textarea>
+                </div>
+
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="form-submit">Submit for Review →</button>
+                <p class="form-fine">By submitting, you agree to be contacted by a GCAS advisor. Your information is kept strictly confidential and will never be shared.</p>
+              </div>
+            </form>
+
+            <div class="form-success" id="qualifySuccess">
+              <div class="check-circle">✓</div>
+              <h4>Application Received.</h4>
+              <p>Thank you for reaching out. A GCAS advisor will personally review your information and respond within one business day.</p>
+              <p>If your email client did not open automatically, please send your details directly to <a href="mailto:intake@gcasnetwork.com" style="color: var(--navy);">intake@gcasnetwork.com</a>.</p>
+              <div style="margin-top: 32px;">
+                <a href="#" onclick="resetIntakeForm(event)" class="btn btn-ghost">Submit Another</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── SCHEDULE PANEL ─── -->
+        <div class="form-panel" id="schedule-panel">
+          <div class="form-card reveal">
+            <p class="form-intro">30 minutes. No obligation. We'll review your business and tell you honestly whether GCAS is the right fit.</p>
+
+            <form id="scheduleForm" novalidate>
+              <div class="form-grid">
+
+                <div class="form-field">
+                  <label for="s_first">First Name <span class="required">*</span></label>
+                  <input type="text" id="s_first" name="firstName" required autocomplete="given-name" />
+                </div>
+
+                <div class="form-field">
+                  <label for="s_last">Last Name <span class="required">*</span></label>
+                  <input type="text" id="s_last" name="lastName" required autocomplete="family-name" />
+                </div>
+
+                <div class="form-field">
+                  <label for="s_email">Email <span class="required">*</span></label>
+                  <input type="email" id="s_email" name="email" required autocomplete="email" placeholder="name@company.com" />
+                </div>
+
+                <div class="form-field">
+                  <label for="s_phone">Phone <span class="required">*</span></label>
+                  <input type="tel" id="s_phone" name="phone" required autocomplete="tel" placeholder="(555) 123-4567" />
+                </div>
+
+                <div class="form-field full">
+                  <label for="s_company">Company Name <span class="required">*</span></label>
+                  <input type="text" id="s_company" name="company" required autocomplete="organization" />
+                </div>
+
+                <div class="form-field">
+                  <label for="s_date">Preferred Date</label>
+                  <input type="date" id="s_date" name="preferredDate" />
+                </div>
+
+                <div class="form-field">
+                  <label for="s_time">Preferred Time</label>
+                  <select id="s_time" name="preferredTime">
+                    <option value="">Select…</option>
+                    <option>Morning (8 AM – 12 PM)</option>
+                    <option>Afternoon (12 PM – 4 PM)</option>
+                    <option>Late Afternoon (4 PM – 6 PM)</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="s_timezone">Time Zone</label>
+                  <select id="s_timezone" name="timezone">
+                    <option value="">Select…</option>
+                    <option>Eastern (ET)</option>
+                    <option>Central (CT)</option>
+                    <option>Mountain (MT)</option>
+                    <option>Pacific (PT)</option>
+                    <option>Alaska (AKT)</option>
+                    <option>Hawaii (HST)</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="s_interest">Primary Interest</label>
+                  <select id="s_interest" name="interest">
+                    <option value="">Select…</option>
+                    <option>Core Onboarding Program</option>
+                    <option>Consulting Engagement</option>
+                    <option>Mentorship Program</option>
+                    <option>Become a GCAS Consultant</option>
+                    <option>General Question</option>
+                  </select>
+                </div>
+
+                <div class="form-field full">
+                  <label for="s_notes">What would you like to discuss?</label>
+                  <textarea id="s_notes" name="notes" placeholder="Share a quick sentence or two about where your business is and what you want to get out of the call."></textarea>
+                </div>
+
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="form-submit">Request Discovery Call →</button>
+                <p class="form-fine">A GCAS advisor will confirm your scheduled time within one business day. We respect your time — if it's not a fit, we'll say so.</p>
+              </div>
+            </form>
+
+            <div class="form-success" id="scheduleSuccess">
+              <div class="check-circle">✓</div>
+              <h4>Request Received.</h4>
+              <p>Thank you. A GCAS advisor will confirm your call within one business day.</p>
+              <p>If your email client did not open automatically, please send your details directly to <a href="mailto:intake@gcasnetwork.com" style="color: var(--navy);">intake@gcasnetwork.com</a>.</p>
+              <div style="margin-top: 32px;">
+                <a href="#" onclick="resetIntakeForm(event)" class="btn btn-ghost">Submit Another</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="4" stroke="#0A2540" stroke-width="2"/>
+          <path d="M8 20 C8 13.4 13.4 8 20 8 C24.2 8 27.9 10.1 30 13.3" stroke="#0A2540" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <circle cx="20" cy="20" r="3" fill="#0A2540"/>
+          <path d="M20 20 L30 30" stroke="#0A2540" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <span class="footer-brand">GCAS NETWORK</span>
+          <span class="footer-tagline">Government Contract Advisory<br/>Serving Small Business Since 1994 · Re-incorporated 2012</span>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>The Program</h5>
+          <a href="method.html">Our Method</a>
+          <a href="network.html">The Network</a>
+          <a href="compliance.html">Compliance</a>
+          <a href="sba.html">SBA Designations</a>
+        </div>
+        <div class="footer-col">
+          <h5>For Business Owners</h5>
+          <a href="specialties.html">Specialties</a>
+          <a href="contract-vehicles.html">Contract Vehicles</a>
+          <a href="consulting.html">Consulting</a>
+          <a href="mentorship.html">Mentorship</a>
+          <a href="qualify.html">Qualify</a>
+        </div>
+        <div class="footer-col">
+          <h5>For Professionals</h5>
+          <a href="consultants.html">Become a Consultant</a>
+          <a href="stories.html">Client Stories</a>
+          <a href="mailto:intake@gcasnetwork.com">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="footer-bottom">© 2026 GCAS Network · Government Contract Advisory · All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
