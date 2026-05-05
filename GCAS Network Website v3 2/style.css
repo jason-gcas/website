@@ -1233,3 +1233,11 @@ body.nav-locked { overflow: hidden; }
 
   .mobile-menu a { font-size: 22px; padding: var(--s-3) 0; }
 }
+
+/* Force logo subtitle onto two lines */
+.logo .logo-sub {
+    display: block;
+    max-width: 180px;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
