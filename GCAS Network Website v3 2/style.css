@@ -212,7 +212,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; color: inher
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: var(--s-5);
 }
 
@@ -793,7 +793,7 @@ body.nav-locked { overflow: hidden; }
 }
 .designation-card-head {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   margin-bottom: var(--s-4);
   gap: var(--s-4);
@@ -1333,7 +1333,7 @@ body.nav-locked { overflow: hidden; }
 /* Footer Layout - Logo on left, menu on right */
 .footer-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
@@ -1498,7 +1498,7 @@ body.nav-locked { overflow: hidden; }
 .footer-cols {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 40px;
     flex-wrap: wrap;
 }
@@ -1530,7 +1530,7 @@ body.nav-locked { overflow: hidden; }
 .footer-cols {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 40px;
     flex-wrap: wrap;
     width: 100%;
@@ -1568,7 +1568,7 @@ body.nav-locked { overflow: hidden; }
 .footer-cols {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 40px;
     flex-wrap: wrap;
     width: 100%;
@@ -1604,4 +1604,29 @@ body.nav-locked { overflow: hidden; }
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.5px;
+}
+
+/* Equal spacing for footer columns */
+.footer-cols {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    text-align: left;
+}
+
+/* Make sure the first column (The Program) has equal space */
+.footer-col:first-child {
+    flex: 1;
+}
+
+.footer-col:nth-child(2) {
+    flex: 1;
+}
+
+.footer-col:last-child {
+    flex: 1;
 }
