@@ -1434,3 +1434,12 @@ body.nav-locked { overflow: hidden; }
     line-height: 1.4;
     margin-top: 10px;
 }
+
+/* Force footer logo size - make it large */
+.footer-logo-img {
+    max-width: 600px !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto 20px auto;
+}
