@@ -1630,3 +1630,17 @@ body.nav-locked { overflow: hidden; }
 .footer-col:last-child {
     flex: 1;
 }
+
+/* Move only The Program column to the right */
+.footer-col:first-child {
+    margin-left: 40px;
+}
+
+/* Keep other columns balanced */
+.footer-col:nth-child(2) {
+    margin-left: 20px;
+}
+
+.footer-col:last-child {
+    margin-right: 0;
+}
