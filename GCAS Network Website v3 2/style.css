@@ -1402,3 +1402,18 @@ body.nav-locked { overflow: hidden; }
         text-align: center;
     }
 }
+
+/* Two-line footer text styling */
+.footer-since {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4a5b6e;
+    margin-top: 10px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .footer-since {
+        text-align: center;
+    }
+}
