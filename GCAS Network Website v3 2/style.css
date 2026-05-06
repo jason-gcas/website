@@ -1644,3 +1644,9 @@ body.nav-locked { overflow: hidden; }
 .footer-col:last-child {
     margin-right: 0;
 }
+
+/* Move For Business Owners column to the left */
+.footer-col:nth-child(2) {
+    margin-left: -10px;
+    margin-right: 10px;
+}
