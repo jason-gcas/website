@@ -1286,3 +1286,12 @@ body.nav-locked { overflow: hidden; }
     font-weight: 400;
     letter-spacing: 0.5px;
 }
+
+/* Center footer logo */
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo img {
+    display: inline-block;
+}
