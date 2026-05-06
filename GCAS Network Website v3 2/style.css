@@ -1490,3 +1490,20 @@ body.nav-locked { overflow: hidden; }
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 }
+
+/* Force footer logo to exactly 500px */
+.footer-logo-img {
+    width: 500px !important;
+    max-width: 500px !important;
+    height: auto !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+@media (max-width: 768px) {
+    .footer-logo-img {
+        width: 80% !important;
+        max-width: 300px !important;
+    }
+}
