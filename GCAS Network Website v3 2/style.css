@@ -1507,3 +1507,11 @@ body.nav-locked { overflow: hidden; }
         max-width: 300px !important;
     }
 }
+
+/* Force footer logo size - critical override */
+.footer-logo-img {
+    width: 300px !important;
+    max-width: 300px !important;
+    min-width: 300px !important;
+    height: auto !important;
+}
