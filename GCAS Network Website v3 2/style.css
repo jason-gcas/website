@@ -1241,3 +1241,17 @@ body.nav-locked { overflow: hidden; }
     line-height: 1.3;
     word-wrap: break-word;
 }
+
+/* Make nav taller to fit logo */
+.nav {
+    padding: 8px 0;
+}
+
+.nav-inner {
+    min-height: 100px;
+}
+
+.nav .logo img {
+    max-height: 80px;
+    width: auto;
+}
