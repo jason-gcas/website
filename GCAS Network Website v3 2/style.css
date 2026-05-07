@@ -1650,3 +1650,150 @@ body.nav-locked { overflow: hidden; }
     margin-left: -10px;
     margin-right: 10px;
 }
+
+/* ========== MOBILE FIXES ========== */
+@media (max-width: 768px) {
+    
+    /* Header / Navigation */
+    .nav-inner {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    
+    .nav .logo {
+        flex: 1;
+        min-width: 180px;
+    }
+    
+    .nav .logo img {
+        height: 60px !important;
+        width: auto;
+    }
+    
+    .logo-primary {
+        font-size: 14px;
+    }
+    
+    .logo-sub {
+        font-size: 10px;
+    }
+    
+    /* Hide desktop menu on mobile */
+    .nav-links {
+        display: none;
+    }
+    
+    /* Show hamburger menu button */
+    .nav-hamburger {
+        display: flex;
+    }
+    
+    /* Hero section */
+    .hero .display-xl {
+        font-size: 32px;
+    }
+    
+    .hero .lead {
+        font-size: 16px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Stats band */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Feature grid */
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer-inner {
+        flex-direction: column;
+    }
+    
+    .footer-left {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer-cols {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+    
+    .footer-logo-img {
+        max-width: 200px !important;
+    }
+}
+
+/* Mobile menu - hidden by default */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+.mobile-menu.open {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: #0A2540;
+    font-weight: 500;
+}
+
+.mobile-menu .mobile-cta {
+    background: #0A2540;
+    color: white;
+    text-align: center;
+    border-radius: 40px;
+}
+
+/* Hamburger button styling */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #0A2540;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .nav-hamburger {
+        display: flex;
+    }
+}
