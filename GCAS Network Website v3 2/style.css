@@ -1874,3 +1874,97 @@ body.nav-locked { overflow: hidden; }
 .feature-card.dark * {
     color: white !important;
 }
+
+/* ========== FIX NARROW TEXT COLUMNS ========== */
+
+/* All cards - prevent text from being too narrow */
+.feature-card,
+.feature-card * {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Fix paragraph and quote text width */
+.feature-card p,
+.feature-card blockquote,
+.feature-card .quote-text {
+    max-width: 100% !important;
+    min-width: 200px !important;
+    width: auto !important;
+    white-space: normal !important;
+    word-break: normal !important;
+}
+
+/* Specific fix for stories page quotes */
+.story-card p,
+.client-quote,
+blockquote {
+    min-width: 250px !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    line-height: 1.5 !important;
+}
+
+/* Remove any forced max-width that's causing narrow columns */
+.feature-card {
+    min-width: 280px !important;
+    max-width: 100% !important;
+}
+
+/* Grid columns should have proper width */
+.feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+}
+
+/* ========== STORIES PAGE SPECIFIC FIXES ========== */
+.story-card {
+    background: #f8fafc;
+    border-radius: 24px;
+    padding: 40px 30px !important;
+    margin-bottom: 30px;
+    text-align: center !important;
+}
+
+.story-card p {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+    color: #0A2540 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    margin-bottom: 20px !important;
+}
+
+.story-card .quote-author {
+    font-weight: 700 !important;
+    color: #0A2540 !important;
+    text-align: center !important;
+    margin-top: 15px !important;
+}
+
+/* Ensure story grid is full width */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+    gap: 30px !important;
+}
+
+/* Remove any narrow column restrictions globally */
+p, blockquote, .story-card p, .feature-card p {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Prevent text from being too narrow */
+.container, .wrap, .wrap-narrow {
+    max-width: 1200px !important;
+}
+
+blockquote {
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+    padding: 20px !important;
+}
