@@ -2079,3 +2079,114 @@ h1, h2, h3, h4, p, a, span, div {
         display: inline-block;
     }
 }
+
+/* Force all pages to have proper layout */
+body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+}
+
+.container, main, .wrap, .wrap-narrow {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Make sure all grid items fit */
+.feature-card, .image-card {
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+.image-bg img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+
+/* Fix text alignment in cards - prevent cut-off */
+.feature-card {
+    text-align: center;
+    padding: 30px 20px !important;
+    margin: 10px !important;
+    box-sizing: border-box !important;
+}
+
+.feature-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.feature-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.feature-card-eyebrow {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.link-arrow {
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Fix image cards */
+.image-card .image-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.image-card h3, .image-card p {
+    text-align: center;
+}
+
+/* Fix dark theme cards */
+.feature-card.dark {
+    text-align: center;
+}
+
+/* Ensure all text in cards is centered and wraps properly */
+@media (max-width: 768px) {
+    .feature-card {
+        margin: 10px 0 !important;
+        padding: 20px 15px !important;
+    }
+    
+    .feature-card h3 {
+        font-size: 22px;
+    }
+    
+    .feature-card p {
+        font-size: 14px;
+    }
+}
+
+/* Fix stats band text */
+.stat-item {
+    text-align: center;
+    padding: 15px;
+}
+
+.stat-num {
+    display: block;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
