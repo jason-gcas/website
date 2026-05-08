@@ -2151,3 +2151,33 @@ body {
   }
 }
 
+
+/* CLEAN RESPONSIVE FIXES */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  width: 100%;
+  min-width: 0;
+}
+
+.feature-card h3,
+.feature-card p {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .feature-grid,
+  .feature-grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+}
+
