@@ -1934,3 +1934,148 @@ body.nav-locked { overflow: hidden; }
         word-wrap: break-word;
     }
 }
+
+/* ========== GLOBAL FIXES FOR ALL PAGES ========== */
+
+/* Container fixes */
+.wrap, .wrap-narrow {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Section spacing */
+.section {
+    padding: 60px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+/* Hero section */
+.hero {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.hero .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* All text should wrap */
+h1, h2, h3, h4, p, a, span, div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ========== DESKTOP (default) ========== */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-cols {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Footer layout */
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-right {
+    flex: 2;
+}
+
+/* ========== MOBILE (max-width: 768px) ========== */
+@media (max-width: 768px) {
+    /* General */
+    .wrap, .wrap-narrow {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .hero {
+        padding: 50px 0;
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Feature grids - stack */
+    .feature-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+    }
+    
+    /* Headers */
+    .display-xl {
+        font-size: 36px !important;
+    }
+    
+    .display-lg {
+        font-size: 28px !important;
+    }
+    
+    /* CTA buttons */
+    .btn-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-row .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Footer */
+    .footer-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-left {
+        text-align: center;
+    }
+    
+    .footer-cols {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+    
+    .footer-col a {
+        display: inline-block;
+    }
+}
