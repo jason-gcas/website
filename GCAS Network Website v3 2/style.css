@@ -2190,3 +2190,50 @@ body {
     font-size: 14px;
     text-align: center;
 }
+
+/* FIX OVERLAPPING CARD LAYOUT */
+
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 40px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  min-height: 700px;
+}
+
+.card-content {
+  position: absolute;
+  inset: 0;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2,
+.card p {
+  max-width: 100%;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .cards-section {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+  }
+
+  .card-content {
+    padding: 32px;
+  }
+}
+
