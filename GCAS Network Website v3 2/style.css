@@ -1797,3 +1797,80 @@ body.nav-locked { overflow: hidden; }
         display: flex;
     }
 }
+
+/* FORCE FIX - All cards text alignment */
+.feature-card,
+.feature-card.image-card,
+.feature-card.dark {
+    display: block !important;
+    text-align: center !important;
+}
+
+.feature-card .image-content,
+.feature-card > div {
+    text-align: center !important;
+}
+
+.feature-card h3,
+.feature-card p,
+.feature-card-eyebrow,
+.link-arrow {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Fix image card specific issues */
+.image-card .image-content {
+    padding: 25px !important;
+    text-align: center !important;
+}
+
+.image-bg {
+    display: block;
+    width: 100%;
+}
+
+.image-bg img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CRITICAL FIX - Cards are links, need to be block elements */
+.feature-card {
+    display: block !important;
+    text-decoration: none !important;
+    text-align: center !important;
+}
+
+/* Force all inner elements to center */
+.feature-card * {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Specific fixes for headings and paragraphs */
+.feature-card h3,
+.feature-card p,
+.feature-card-eyebrow,
+.link-arrow {
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Image card content centering */
+.image-card .image-content {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* Dark card text color fix */
+.feature-card.dark,
+.feature-card.dark * {
+    color: white !important;
+}
