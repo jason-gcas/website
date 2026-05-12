@@ -1788,3 +1788,34 @@ body.nav-locked { overflow: hidden; }
         order: -1 !important;
     }
 }
+
+/* ========== SERVICES & FEES PAGE - MOBILE ONLY ========== */
+@media (max-width: 768px) {
+    /* Make images full width */
+    body.services-fees-page .section .wrap img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Stack sections vertically */
+    body.services-fees-page .feature-grid-two,
+    body.services-fees-page .section .wrap > div {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Move images before text */
+    body.services-fees-page .feature-grid-two img,
+    body.services-fees-page .section .wrap img {
+        order: -1 !important;
+    }
+    
+    /* Logo unchanged */
+    body.services-fees-page .nav .logo img {
+        height: auto !important;
+        width: auto !important;
+        max-width: 120px !important;
+    }
+}
