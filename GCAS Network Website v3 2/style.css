@@ -1750,3 +1750,17 @@ body.nav-locked { overflow: hidden; }
         font-size: 8px !important;
     }
 }
+
+/* ========== REMOVE STRAY 'n' FROM CONTACT PAGE FOOTER - MOBILE ONLY ========== */
+@media (max-width: 768px) {
+    /* Hide any stray 'n' that might appear in footer on mobile */
+    .footer {
+        word-break: normal;
+    }
+    
+    /* If there's a specific element with just 'n', hide it */
+    .footer span:only-child,
+    .footer div:empty {
+        display: none;
+    }
+}
