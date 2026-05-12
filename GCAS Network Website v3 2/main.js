@@ -155,7 +155,7 @@
 
 /* ═══ INTAKE FORMS ═══ */
 (function () {
-  const INTAKE_EMAIL = 'intake@gcasnetwork.com';
+  const INTAKE_EMAIL = 'jason@gcasnetwork.com';
 
   /* Tab switching */
   const tabs = document.querySelectorAll('.form-tab');
