@@ -1764,3 +1764,52 @@ body.nav-locked { overflow: hidden; }
         display: none;
     }
 }
+
+/* ========== SERVICES & FEES PAGE - MOBILE ONLY (FIXED) ========== */
+@media (max-width: 768px) {
+    
+    /* Target only the main content images, NOT the header logo */
+    body.services-fees-page .section .wrap img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Make each content section stack vertically */
+    body.services-fees-page .feature-grid-two,
+    body.services-fees-page .section .wrap > div,
+    body.services-fees-page .feature-grid {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Force images to appear BEFORE text in each section */
+    body.services-fees-page .feature-grid-two img,
+    body.services-fees-page .section .wrap img,
+    body.services-fees-page .feature-grid img {
+        order: -1 !important;
+    }
+    
+    /* Ensure text containers take full width and wrap properly */
+    body.services-fees-page .feature-grid-two > div,
+    body.services-fees-page .section .wrap > div,
+    body.services-fees-page .feature-grid > div {
+        width: 100% !important;
+    }
+    
+    /* Proper text formatting for mobile */
+    body.services-fees-page p,
+    body.services-fees-page h2,
+    body.services-fees-page h3 {
+        width: 100% !important;
+        word-wrap: break-word !important;
+    }
+    
+    /* HEADER LOGO - UNCHANGED (no width changes) */
+    body.services-fees-page .nav .logo img {
+        height: auto !important;
+        width: auto !important;
+        max-width: 120px !important;
+    }
+}
