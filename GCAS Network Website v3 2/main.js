@@ -379,3 +379,63 @@ if (scheduleForm) {
     }
   });
 }
+
+// Ensure Formspree code runs after page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const intakeForm = document.getElementById('qualifyForm');
+    if (intakeForm) {
+        // Remove any existing submit handlers
+        const newIntakeForm = intakeForm.cloneNode(true);
+        intakeForm.parentNode.replaceChild(newIntakeForm, intakeForm);
+        
+        newIntakeForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(newIntakeForm);
+            formData.append('_subject', 'GCAS Qualification Intake Form');
+            
+            try {
+                const response = await fetch('https://formspree.io/f/xeenllwe', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    newIntakeForm.style.display = 'none';
+                    document.getElementById('qualifySuccess').style.display = 'block';
+                } else {
+                    alert('Submission failed. Please try again.');
+                }
+            } catch (error) {
+                alert('Network error. Please try again.');
+            }
+        });
+    }
+    
+    const scheduleForm = document.getElementById('scheduleForm');
+    if (scheduleForm) {
+        const newScheduleForm = scheduleForm.cloneNode(true);
+        scheduleForm.parentNode.replaceChild(newScheduleForm, scheduleForm);
+        
+        newScheduleForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(newScheduleForm);
+            formData.append('_subject', 'GCAS Discovery Call Request');
+            
+            try {
+                const response = await fetch('https://formspree.io/f/xeenllwe', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    newScheduleForm.style.display = 'none';
+                    document.getElementById('scheduleSuccess').style.display = 'block';
+                } else {
+                    alert('Submission failed. Please try again.');
+                }
+            } catch (error) {
+                alert('Network error. Please try again.');
+            }
+        });
+    }
+});
