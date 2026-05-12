@@ -1515,3 +1515,114 @@ body.nav-locked { overflow: hidden; }
     min-width: 300px !important;
     height: auto !important;
 }
+
+/* ========== MOBILE ONLY FIXES - No desktop changes ========== */
+@media (max-width: 768px) {
+    
+    /* Fix: Make header responsive so hamburger doesn't get pushed off screen */
+    .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 15px;
+        box-sizing: border-box;
+    }
+    
+    /* Fix: Ensure logo doesn't take too much space */
+    .nav .logo {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    /* Fix: Make logo image smaller on mobile */
+    .nav .logo img {
+        height: 50px !important;
+        width: auto;
+    }
+    
+    /* Fix: Logo text smaller on mobile */
+    .logo-primary {
+        font-size: 12px;
+    }
+    
+    .logo-sub {
+        font-size: 8px;
+    }
+    
+    /* Fix: Hamburger button - ensure it's visible and clickable */
+    .nav-hamburger {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    .nav-hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #0A2540;
+        border-radius: 3px;
+        transition: all 0.3s;
+    }
+    
+    /* Fix: Mobile menu - hidden by default, shows when open */
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .mobile-menu.open {
+        display: flex;
+    }
+    
+    .mobile-menu a {
+        padding: 10px;
+        text-decoration: none;
+        color: #0A2540;
+        font-weight: 500;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .mobile-menu a:last-child {
+        border-bottom: none;
+    }
+    
+    /* Fix: Footer layout - center logo and text */
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .footer-logo-img {
+        display: inline-block;
+        margin: 0 auto 15px auto;
+    }
+    
+    .footer-cols {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+}

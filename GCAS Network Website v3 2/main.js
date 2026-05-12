@@ -285,3 +285,18 @@ if (hamburger && mobileMenu) {
         mobileMenu.setAttribute('aria-hidden', !expanded);
     });
 }
+
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function() {
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true' ? false : true;
+            hamburger.setAttribute('aria-expanded', expanded);
+            mobileMenu.classList.toggle('open');
+            mobileMenu.setAttribute('aria-hidden', !expanded);
+        });
+    }
+});
