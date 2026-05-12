@@ -1674,3 +1674,60 @@ body.nav-locked { overflow: hidden; }
         text-align: center !important;
     }
 }
+
+/* ========== SERVICES & FEES PAGE - MOBILE ONLY ========== */
+@media (max-width: 768px) {
+    /* Make images full width on mobile */
+    .services-fees-page img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Reorder each section so image appears above text */
+    .services-fees-page .feature-grid,
+    .services-fees-page .section {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Force image to be first in each section */
+    .services-fees-page .feature-grid .reveal,
+    .services-fees-page .section .reveal {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Make sure image comes before text */
+    .services-fees-page .feature-grid .reveal img {
+        order: -1 !important;
+    }
+}
+
+/* ========== SERVICES & FEES PAGE - MOBILE IMAGE ORDER ========== */
+@media (max-width: 768px) {
+    /* Target each section individually */
+    body.services-fees-page .feature-grid-two,
+    body.services-fees-page .section .wrap > div,
+    body.services-fees-page .feature-grid {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Move image before text in each content block */
+    body.services-fees-page .feature-grid-two img,
+    body.services-fees-page .section .wrap img,
+    body.services-fees-page .feature-grid img {
+        order: -1 !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Ensure text containers don't interfere */
+    body.services-fees-page .feature-grid-two > div,
+    body.services-fees-page .section .wrap > div {
+        flex-direction: column !important;
+        display: flex !important;
+    }
+}
