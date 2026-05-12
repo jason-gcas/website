@@ -1731,3 +1731,22 @@ body.nav-locked { overflow: hidden; }
         display: flex !important;
     }
 }
+
+/* ========== FIX STRETCHED LOGO ON SERVICES & FEES PAGE - MOBILE ONLY ========== */
+@media (max-width: 768px) {
+    /* Target only the main logo on services-fees page */
+    body.services-fees-page .nav .logo img {
+        height: 50px !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+    
+    /* Also ensure the logo-text stays properly sized */
+    body.services-fees-page .logo-primary {
+        font-size: 12px !important;
+    }
+    
+    body.services-fees-page .logo-sub {
+        font-size: 8px !important;
+    }
+}
