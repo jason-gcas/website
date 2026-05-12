@@ -300,3 +300,82 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// ========== QUALIFY PAGE FORMSPREE INTEGRATION ==========
+// Prevent mailto popups and send directly to Formspree
+
+const formspreeEndpoint = 'https://formspree.io/f/xeenllwe';
+
+// Handle Qualification Intake Form
+const intakeForm = document.getElementById('qualifyForm');
+if (intakeForm) {
+  intakeForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitBtn = intakeForm.querySelector('.form-submit');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+    
+    const formData = new FormData(intakeForm);
+    formData.append('_subject', 'GCAS Qualification Intake Form');
+    
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      
+      if (response.ok) {
+        intakeForm.style.display = 'none';
+        document.getElementById('qualifySuccess').style.display = 'block';
+      } else {
+        alert('Submission failed. Please try again or email jason@gcasnetwork.com directly.');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    } catch (error) {
+      alert('Network error. Please check your connection.');
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
+
+// Handle Schedule Discovery Call Form
+const scheduleForm = document.getElementById('scheduleForm');
+if (scheduleForm) {
+  scheduleForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitBtn = scheduleForm.querySelector('.form-submit');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+    
+    const formData = new FormData(scheduleForm);
+    formData.append('_subject', 'GCAS Discovery Call Request');
+    
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      
+      if (response.ok) {
+        scheduleForm.style.display = 'none';
+        document.getElementById('scheduleSuccess').style.display = 'block';
+      } else {
+        alert('Submission failed. Please try again or call us directly.');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    } catch (error) {
+      alert('Network error. Please check your connection.');
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
