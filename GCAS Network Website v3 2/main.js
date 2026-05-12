@@ -230,7 +230,7 @@
   }
 
   /* Attach handler */
-  function attachFormHandler(formId, successId, subject, formType) {
+  function // attachFormHandler(formId, successId, subject, formType) {
     const form = document.getElementById(formId);
     const success = document.getElementById(successId);
     if (!form || !success) return;
@@ -252,9 +252,9 @@
     });
   }
 
-  attachFormHandler('qualifyForm', 'qualifySuccess', 'GCAS Qualification Intake', 'qualification');
-  attachFormHandler('scheduleForm', 'scheduleSuccess', 'GCAS Discovery Call Request', 'discovery call');
-  attachFormHandler('consultantForm', 'consultantSuccess', 'GCAS Consultant Application', 'consultant application');
+  // attachFormHandler('qualifyForm', 'qualifySuccess', 'GCAS Qualification Intake', 'qualification');
+  // attachFormHandler('scheduleForm', 'scheduleSuccess', 'GCAS Discovery Call Request', 'discovery call');
+  // attachFormHandler('consultantForm', 'consultantSuccess', 'GCAS Consultant Application', 'consultant application');
 
   window.resetIntakeForm = function (e) {
     if (e) e.preventDefault();
